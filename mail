@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせフォーム</title>
+</head>
+<body>
+    <h1>お問い合わせフォーム</h1>
+    <form action="https://api.staticforms.xyz/submit" method="POST">
+        <!-- StaticFormsのaccessKeyを設定 -->
+        <input type="hidden" name="accessKey" value="29121ceb-e8d9-4073-822c-7da263625b67">
+        
+        <!-- お名前フィールド -->
+        <label for="name">お名前:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- メールアドレスフィールド -->
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- メッセージフィールド -->
+        <label for="message">メッセージ:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <!-- フォーム送信ボタン -->
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>
