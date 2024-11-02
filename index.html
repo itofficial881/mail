@@ -49,11 +49,11 @@
             const selectedValue = detailsSelect.value;
 
             if (selectedValue === "問い合わせ") {
-                messageTextarea.value = "[問い合わせ]↓に問い合わせ内容を入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+                messageTextarea.value = "[問い合わせ]下線より下に問い合わせ内容を入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
             } else if (selectedValue === "ご依頼について") {
-                messageTextarea.value = "[ご依頼について]ご依頼をご検討いただき、ありがとうございます。以下の項目を入力して下さい。\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+                messageTextarea.value = "[ご依頼について]ご依頼をご検討いただき、ありがとうございます。下線より下の項目を入力して下さい。\nーーーーーーーーーーーーーーーーーーーーーーーーー";
             } else if (selectedValue === "メッセージ") {
-                messageTextarea.value = "[メッセージ]↓にメッセージを入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+                messageTextarea.value = "[メッセージ]下線より下にメッセージを入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
             } else {
                 messageTextarea.value = ""; // 選択肢が選ばれなかった時はメッセージをクリア
             }
