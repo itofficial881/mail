@@ -27,7 +27,7 @@
 
         <!-- 詳細フィールド -->
         <label for="details">Details:</label>
-        <select id="details" name="details" required>
+        <select id="details" name="details" required onchange="updateMessage()">
             <option value="">選択してください</option>
             <option value="問い合わせ">問い合わせ</option>
             <option value="ご依頼について">ご依頼について</option>
@@ -41,5 +41,23 @@
         <!-- フォーム送信ボタン -->
         <button type="submit">submit</button>
     </form>
+
+    <script>
+        function updateMessage() {
+            const detailsSelect = document.getElementById("details");
+            const messageTextarea = document.getElementById("message");
+            const selectedValue = detailsSelect.value;
+
+            if (selectedValue === "問い合わせ") {
+                messageTextarea.value = "[問い合わせ]↓に問い合わせ内容を入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+            } else if (selectedValue === "ご依頼について") {
+                messageTextarea.value = "[ご依頼について]ご依頼をご検討いただき、ありがとうございます。以下の項目を入力して下さい。\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+            } else if (selectedValue === "メッセージ") {
+                messageTextarea.value = "[メッセージ]↓にメッセージを入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
+            } else {
+                messageTextarea.value = ""; // 選択肢が選ばれなかった時はメッセージをクリア
+            }
+        }
+    </script>
 </body>
 </html>
