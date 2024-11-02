@@ -4,27 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAIL</title>
-    <link rel="stylesheet" href="index.css"> <!-- CSSファイルをリンク -->
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet"> <!-- Quicksandフォントを追加 -->
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>MAIL</h1>
     <form action="https://api.staticforms.xyz/submit" method="POST" target="_self">
-        <!-- StaticFormsのaccessKeyを設定 -->
         <input type="hidden" name="accessKey" value="29121ceb-e8d9-4073-822c-7da263625b67">
-        
-        <!-- StaticFormsのリダイレクトURLを設定 -->
         <input type="hidden" name="redirectTo" value="https://itofficial881.github.io/mail/thank-you.html">
         
-        <!-- お名前フィールド -->
         <label for="name">name:</label>
         <input type="text" id="name" name="name" required>
 
-        <!-- メールアドレスフィールド -->
         <label for="email">mail address:</label>
         <input type="email" id="email" name="email" required>
 
-        <!-- 詳細フィールド -->
         <label for="details">Details:</label>
         <select id="details" name="details" required onchange="updateMessage()">
             <option value="">選択してください</option>
@@ -33,11 +27,9 @@
             <option value="メッセージ">メッセージ</option>
         </select>
 
-        <!-- メッセージフィールド -->
         <label for="message">message:</label>
         <textarea id="message" name="message" required></textarea>
 
-        <!-- フォーム送信ボタン -->
         <button type="submit">submit</button>
     </form>
 
@@ -54,7 +46,7 @@
             } else if (selectedValue === "メッセージ") {
                 messageTextarea.value = "[メッセージ]下線より下にメッセージを入力して下さい\nーーーーーーーーーーーーーーーーーーーーーーーーー";
             } else {
-                messageTextarea.value = ""; // 選択肢が選ばれなかった時はメッセージをクリア
+                messageTextarea.value = "";
             }
         }
     </script>
