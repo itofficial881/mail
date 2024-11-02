@@ -6,11 +6,10 @@
     <title>MAIL</title>
     <link rel="stylesheet" href="index.css"> <!-- CSSファイルをリンク -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet"> <!-- Quicksandフォントを追加 -->
-<center><h1>MAIL</h1></center>
 </head>
 <body>
+    <h1>MAIL</h1>
     <form action="https://api.staticforms.xyz/submit" method="POST" target="_self">
-
         <!-- StaticFormsのaccessKeyを設定 -->
         <input type="hidden" name="accessKey" value="29121ceb-e8d9-4073-822c-7da263625b67">
         
@@ -36,7 +35,7 @@
 
         <!-- メッセージフィールド -->
         <label for="message">message:</label>
-        <textarea id="message" name="message" required style="background: transparent; border: 1px solid black;"></textarea>
+        <textarea id="message" name="message" required></textarea>
 
         <!-- フォーム送信ボタン -->
         <button type="submit">submit</button>
